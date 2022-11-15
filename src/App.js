@@ -7,6 +7,7 @@ import { Footer } from "./components/footer/footer";
 
 function App() {
   const getState = useSelector((state) => state.getData);
+  // console.log(useSelector((state) => state.getData));
   console.log(getState);
 
   return (
