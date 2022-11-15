@@ -1,24 +1,21 @@
 import React from "react";
 
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export function Card() {
+import sadFace from "../../../images/sad-crying-face-clip-art-8.jpg";
+
+export function LocalCard() {
   return (
-    <Container fluid className="mt-5" >
-      <Row>
-        <Col xs={6}>
-          <Form.Control type="text" id="searchBar" name="searchBar" />
-        </Col>
-        <Col xs={3}>
-          <Button variant="light" type="button" id="btnSearch" name="btnSearch">
-            Buscar Artículo
-          </Button>
-        </Col>
-      </Row>
-    </Container>
+    <Row fluid>
+      {
+        // data.data.data.forEach((product) => {
+        //   <Col xs={3}>
+        //     <Card.Title>{product.name}</Card.Title>
+        //   </Col>;
+        // })
+      }
+    </Row>
   );
 }

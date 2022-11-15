@@ -7,22 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export function Footer() {
-  return (
-    <Container fluid className="mt-5" >
-      <Form>
-        <Row>
-          <Col xs={6}>
-            <Form.Control type="text" id="searchBar" name="searchBar" />
-          </Col>
-          <Col xs={3}>
-            <Button variant="light" type="button" id="btnSearch" name="btnSearch">
-              Buscar Artículo
-            </Button>
-          </Col>
-        </Row>
-      </Form>
-    </Container>
-  );
+  return <Container fluid className="mt-5"></Container>;
 }
 
 export default Footer;

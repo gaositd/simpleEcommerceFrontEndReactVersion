@@ -1,10 +1,10 @@
-import React from 'react';
-import { Cards } from './cards/cards';
+import React, { useState, useEffect } from "react";
+import { Cards } from "./cards/cards";
 
-export function Main(){
+export function Main() {
   return (
     <div>
-    <Cards />
+      <Cards />
     </div>
   );
 }
