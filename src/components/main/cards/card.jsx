@@ -1,14 +1,14 @@
 import React from "react";
 
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Col from "react-bootstrap/Col";
 
-import sadFace from "../../../images/sad-crying-face-clip-art-8.jpg";
+// import sadFace from "../../../images/sad-crying-face-clip-art-8.jpg";
 
 export function LocalCard() {
   return (
-    <Row fluid>
+    <Row fluid="true">
       {
         // data.data.data.forEach((product) => {
         //   <Col xs={3}>

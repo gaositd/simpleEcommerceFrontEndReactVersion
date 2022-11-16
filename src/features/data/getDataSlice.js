@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const dataSlice = createSlice({
-  name: "getData",
-  initialState: [],
+  name: "getDataFromDB",
+  initialState: [1, 2],
   reducers: {},
 });
 

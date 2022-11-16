@@ -16,4 +16,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-//https://www.youtube.com/watch?v=w2rAP7d6ndg 23:21
+//https://www.youtube.com/watch?v=w2rAP7d6ndg 08:30 => 23:21 23:23 =>
+//https://addons.mozilla.org/en-US/firefox/addon/react-devtools/
