@@ -1,21 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
-// import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
 
 // import sadFace from "../../../images/sad-crying-face-clip-art-8.jpg";
 
-export function LocalCard() {
+// export function LocalCard({data}) {
+export const LocalCard = (data) =>{
+  
   return (
-    <Row fluid="true">
+    <React.Fragment>
       {
-        // data.data.data.forEach((product) => {
-        //   <Col xs={3}>
-        //     <Card.Title>{product.name}</Card.Title>
-        //   </Col>;
-        // })
+        data.data
+          ? <Col md={3}>
+              <Card.Title>{data.data.name}</Card.Title>
+            </Col>
+          :null
       }
-    </Row>
+  </React.Fragment>
   );
 }
