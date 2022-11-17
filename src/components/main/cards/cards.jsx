@@ -10,10 +10,11 @@ import "../../header/logo/image.css";
 export function Cards() {
   const data = useSelector((state) => state.getData);
   return (
-    <Container fluid="true" className="mt-5">
+    <Container fluid="true" className="m-5">
       <Row fluid="true" >
-      {data.map((dat) => (
+      {data.map((dat, i) => (
         <LocalCard
+          key={i}
           data={dat}
         /> 
       ))}

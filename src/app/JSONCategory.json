@@ -1,0 +1,30 @@
+[
+  {
+    "ID": 1,
+    "Name": "bebida energetica"
+  },
+  {
+    "ID": 2,
+    "Name": "pisco"
+  },
+  {
+    "ID": 3,
+    "Name": "ron"
+  },
+  {
+    "ID": 4,
+    "Name": "bebida"
+  },
+  {
+    "ID": 5,
+    "Name": "snack"
+  },
+  {
+    "ID": 6,
+    "Name": "cerveza"
+  },
+  {
+    "ID": 7,
+    "Name": "vodka"
+  }
+]
