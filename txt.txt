@@ -1,3 +1,509 @@
 bartender   pnpegg
 logo        https://www.pngwing.com
 sad Face    https://clipground.com/
+
+const initialState = [
+  {
+    ID: 5,
+    Name: "ENERGETICA MR BIG",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg",
+    price: 1490,
+    Discount: 20,
+    ID_category: 1,
+  },
+  {
+    ID: 6,
+    Name: "ENERGETICA RED BULL",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/redbull8381.jpg",
+    price: 1490,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 7,
+    Name: "ENERGETICA SCORE",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/logo7698.png",
+    price: 1290,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 8,
+    Name: "PISCO ALTO DEL CARMEN 35º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/alto8532.jpg",
+    price: 7990,
+    Discount: 10,
+    ID_category: 2,
+  },
+  {
+    ID: 9,
+    Name: "PISCO ALTO DEL CARMEN 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/alto408581.jpg",
+    price: 5990,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 10,
+    Name: "PISCO ARTESANOS 35º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/artesanos8818.jpg",
+    price: 3990,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 11,
+    Name: "PISCO BAUZA 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/bauza408831.jpg",
+    price: 4990,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 12,
+    Name: "PISCO CAMPANARIO 35º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/campanario8845.jpg",
+    price: 2990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 13,
+    Name: "PISCO CAMPANARIO 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/campanario408881.jpg",
+    price: 3990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 14,
+    Name: "PISCO ESPIRITU DEL ELQUI 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/espiritu8936.jpg",
+    price: 5990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 15,
+    Name: "PISCO ESPIRITU DEL ELQUI 45º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/espiritu8957.jpg",
+    price: 6990,
+    Discount: 5,
+    ID_category: 2,
+  },
+  {
+    ID: 16,
+    Name: "PISCO HORCON QUEMADO 35º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/horcon359049.jpg",
+    price: 6990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 17,
+    Name: "PISCO HORCON QUEMADO 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/horcon409062.jpg",
+    price: 7990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 18,
+    Name: "PISCO HORCON QUEMADO 46º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/horcon469075.jpg",
+    price: 8990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 19,
+    Name: "PISCO MISTRAL 35º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/mistral359200.jpg",
+    price: 4990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 20,
+    Name: "PISCO MISTRAL 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/mistral409215.jpg",
+    price: 4990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 21,
+    Name: "PISCO TRES ERRES 35º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/rrr359305.jpg",
+    price: 4590,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 22,
+    Name: "PISCO TRES ERRES 40º",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/rrr409319.jpg",
+    price: 4990,
+    Discount: 20,
+    ID_category: 2,
+  },
+  {
+    ID: 23,
+    Name: "RON BACARDI AÑEJO",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/bacardi9450.jpg",
+    price: 4990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 24,
+    Name: "RON BACARDI 8 AÑOS",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/bacardianejo9463.jpg",
+    price: 5990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 25,
+    Name: "RON ABUELO",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/abuelo9475.jpg",
+    price: 3990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 26,
+    Name: "RON BARCELO AÑEJO",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/barceloanejo9553.jpg",
+    price: 4990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 27,
+    Name: "RON BARCELO DORADO",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/barcelodorado9567.jpg",
+    price: 3990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 28,
+    Name: "RON FLOR DE CAÑA 4 AÑOS",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/flor49664.jpg",
+    price: 3990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 29,
+    Name: "RON FLOR DE CAÑA 5 AÑOS",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/flor59677.jpg",
+    price: 4590,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 30,
+    Name: "RON HAVANA AÑEJO RESERVA",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/havanaan-ejo9750.jpg",
+    price: 6990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 31,
+    Name: "RON HAVANA ESPECIAL",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/havanaespecial9768.jpg",
+    price: 5990,
+    Discount: 20,
+    ID_category: 3,
+  },
+  {
+    ID: 32,
+    Name: "RON PAMPERO",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/pampero-especial0296.jpg",
+    price: 5490,
+    Discount: 20,
+    ID_category: 3,
+  },
+  {
+    ID: 33,
+    Name: "RON PAMPERO ANIVERSARIO",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/ron_pampero_aniversario0311.jpg",
+    price: 20000,
+    Discount: 15,
+    ID_category: 3,
+  },
+  {
+    ID: 34,
+    Name: "ENERGETICA MONSTER RIPPER",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/mosterriper0436.jpg",
+    price: 1990,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 35,
+    Name: "ENERGETICA MAKKA DRINKS",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/makka-drinks-250ml0455.jpg",
+    price: 1190,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 36,
+    Name: "ENERGETICA MONSTER VERDE",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/monsterverde0476.jpg",
+    price: 1990,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 37,
+    Name: "COCA COLA ZERO DESECHABLE",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/cocazero9766.jpg",
+    price: 1490,
+    Discount: 0,
+    ID_category: 4,
+  },
+  {
+    ID: 38,
+    Name: "RON BOTRAN AÑEJO 5 AÑOS",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/ronbotran9337.jpg",
+    price: 4990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 39,
+    Name: "RON MITJANS",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/mitjan6396.jpg",
+    price: 2990,
+    Discount: 0,
+    ID_category: 3,
+  },
+  {
+    ID: 47,
+    Name: "Maní salado",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/manisaladomp4415.jpg",
+    price: 600,
+    Discount: 0,
+    ID_category: 5,
+  },
+  {
+    ID: 48,
+    Name: "SPRITE 1 1/2 Lts",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/sprite-lata-33cl5575.jpg",
+    price: 1500,
+    Discount: 0,
+    ID_category: 4,
+  },
+  {
+    ID: 50,
+    Name: "SPRITE 2 Lt",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/sprite-2lt4365.jpg",
+    price: 1800,
+    Discount: 0,
+    ID_category: 4,
+  },
+  {
+    ID: 52,
+    Name: "Fanta",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/fanta_2lt5236.jpg",
+    price: 1500,
+    Discount: 0,
+    ID_category: 4,
+  },
+  {
+    ID: 53,
+    Name: "Mani Sin Sal",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/manisinsalmp6988.jpg",
+    price: 500,
+    Discount: 0,
+    ID_category: 5,
+  },
+  {
+    ID: 54,
+    Name: "Papas Fritas Lisas Bolsa Grande",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/papaslisasgrande7128.jpg",
+    price: 1490,
+    Discount: 0,
+    ID_category: 5,
+  },
+  {
+    ID: 55,
+    Name: "Papas Fritas Bolsa Pequeña",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/papaslisas7271.jpg",
+    price: 500,
+    Discount: 0,
+    ID_category: 5,
+  },
+  {
+    ID: 56,
+    Name: "Papas Fritas Tarro",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/78028005335657432.jpg",
+    price: 1990,
+    Discount: 0,
+    ID_category: 5,
+  },
+  {
+    ID: 57,
+    Name: "COCA COLA NORMAL DESECHABLE 1500cc",
+    Url_Image: null,
+    price: 1500,
+    Discount: 0,
+    ID_category: 4,
+  },
+  {
+    ID: 58,
+    Name: "COCA COLA LIGHT DESECHABLE",
+    Url_Image: null,
+    price: 1500,
+    Discount: 0,
+    ID_category: 4,
+  },
+  {
+    ID: 68,
+    Name: "Bebida Sprite 1 Lt",
+    Url_Image: "",
+    price: 1250,
+    Discount: 10,
+    ID_category: 4,
+  },
+  {
+    ID: 77,
+    Name: "ENERGETICA MONSTER RIPPER",
+    Url_Image: "",
+    price: 1990,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 79,
+    Name: "ENERGETICA MONSTER VERDE",
+    Url_Image: "",
+    price: 1990,
+    Discount: 0,
+    ID_category: 1,
+  },
+  {
+    ID: 87,
+    Name: "PISCO MISTRAL 35°",
+    Url_Image: "https://dojiw2m9tvv09.cloudfront.net/11132/product/358978.jpg",
+    price: 4990,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 88,
+    Name: "PISCO MISTRAL GRAN NOBEL 40°",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/grannobel9104.jpg",
+    price: 19900,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 89,
+    Name: "PISCO MISTRAL 40°",
+    Url_Image: "https://dojiw2m9tvv09.cloudfront.net/11132/product/409346.jpg",
+    price: 4990,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 90,
+    Name: "PISCO MISTRAL 46°",
+    Url_Image: "https://dojiw2m9tvv09.cloudfront.net/11132/product/469463.jpg",
+    price: 7890,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 91,
+    Name: "PISCO MISTRAL NOBEL 40°",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/nobel409551.jpg",
+    price: 19990,
+    Discount: 0,
+    ID_category: 2,
+  },
+  {
+    ID: 92,
+    Name: "PISCO MISTRAL NOBEL 46",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/nobelanejado9639.jpg",
+    price: 15990,
+    Discount: 15,
+    ID_category: 2,
+  },
+  {
+    ID: 98,
+    Name: "Cerveza Escudo Normal LATA 350CC",
+    Url_Image: "",
+    price: 600,
+    Discount: 0,
+    ID_category: 6,
+  },
+  {
+    ID: 99,
+    Name: "Cerveza Escudo Sin Filtrar LATA 350CC",
+    Url_Image: null,
+    price: 800,
+    Discount: 0,
+    ID_category: 6,
+  },
+  {
+    ID: 104,
+    Name: "ABSOLUT",
+    Url_Image:
+      "https://dojiw2m9tvv09.cloudfront.net/11132/product/absolut21381.png",
+    price: 8990,
+    Discount: 30,
+    ID_category: 7,
+  },
+];
