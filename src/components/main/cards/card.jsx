@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import Swal from 'sweetalert2';
 
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -28,6 +29,17 @@ export const LocalCard = (data) => {
     return newPath;
   }
 
+  function showAddProduct (value){
+    console.log(value);
+    Swal.fire({
+      title:"Producto Agregado",
+      text:value,
+      icon:"success",
+      confirmButtonAriaLabel:"OK",
+      confirmButtonText:"OK"
+    });
+  }
+
   return (
     <React.Fragment>
       {
@@ -44,10 +56,10 @@ export const LocalCard = (data) => {
               </Card.Text>
               <Button
                 variant="light"
-                onClick={() => alert("producto agregado")}
+                onClick={() => showAddProduct(data.data.name)}
                 className="h-30"
               >
-                <bold>Comprar producto</bold>
+                <b>Comprar producto</b>
               </Button>
             </Card.Body>
           </Card>
