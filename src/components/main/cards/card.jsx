@@ -8,10 +8,10 @@ import sadFace from "../../../images/sad-crying-face-clip-art-8.jpg";
 
 export const GetPrice = (discount, price)=>{
   let newPrice = 0;
-  if(discount === 0){
-    return price.toFixed(2);
+  if(discount.discount === 0){
+    return discount.price.toFixed(2);
   }else{
-    newPrice = price - (price * (discount / 100));
+    newPrice = discount.price - (discount.price * (discount.discount / 100));
     return newPrice.toFixed(2);
   }
 }
