@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import products from '../../app/JSONProducts.json';
-import category from '../../app/JSONCategory.json';
+import products from "../../app/JSONProducts.json";
 
 const initialState = products;
 
@@ -9,9 +8,7 @@ export const dataSlice = createSlice({
   name: "getDataFromDB",
   //initialState: initialState,
   initialState,
-  reducers: {
-    
-  },
+  reducers: {},
 });
 
 export default dataSlice.reducer;

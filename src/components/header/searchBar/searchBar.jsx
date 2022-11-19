@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Swal from 'sweetalert2';
-import { useSelector } from 'react-redux';
+import Swal from "sweetalert2";
+import { useSelector } from "react-redux";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -9,52 +9,52 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function SearchBar() {
-  const products = useSelector(state => state.getData);
+  const products = useSelector((state) => state.getData);
   const [text, setText] = useState("");
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     setText({
       ...text,
-      [e.target.name] : e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  const getData = (text) =>{
-    let aux = ""
-    products.filter(product => (
-      product.name.toUpperCase().includes(text.toUpperCase()))
-        ? aux += `${product.name}<br />`
-        :null
-      );
-    
+  const getData = (text) => {
+    let aux = "";
+    products.filter((product) =>
+      product.name.toUpperCase().includes(text.toUpperCase())
+        ? (aux += `${product.name}<br />`)
+        : null
+    );
+
     return aux;
-  }
+  };
 
-  function showSwal(){
+  function showSwal() {
     const showProducts = getData(text.searchBar);
 
     showProducts
-      ?Swal.fire({
-        title:"Productos encontrados",
-        html:showProducts,
-        icon:"success",
-        confirmButtonAriaLabel:"OK",
-        confirmButtonText:"OK"
-      })
-      :Swal.fire({
-        title:"Productos no encontrados",
-        text:"",
-        icon:'error',
-        confirmButtonAriaLabel:"OK",
-        confirmButtonText:"OK"
-      })
+      ? Swal.fire({
+          title: "Productos encontrados",
+          html: showProducts,
+          icon: "success",
+          confirmButtonAriaLabel: "OK",
+          confirmButtonText: "OK",
+        })
+      : Swal.fire({
+          title: "Productos no encontrados",
+          text: "",
+          icon: "error",
+          confirmButtonAriaLabel: "OK",
+          confirmButtonText: "OK",
+        });
   }
 
   return (
     <Container fluid>
       <Form>
         <Row>
-          <Col xs={6}>
+          <Col xs={3}>
             <Form.Control
               type="text"
               id="searchBar"
@@ -62,7 +62,7 @@ function SearchBar() {
               onChange={handleChange}
             />
           </Col>
-          <Col xs={3}>
+          <Col xs={6}>
             <Button
               variant="light"
               type="button"

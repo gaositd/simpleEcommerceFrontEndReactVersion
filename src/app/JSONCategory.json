@@ -1,30 +1,30 @@
 [
   {
-    "ID": 1,
-    "Name": "bebida energetica"
+    "value": 1,
+    "label": "Bebida energetica"
   },
   {
-    "ID": 2,
-    "Name": "pisco"
+    "value": 2,
+    "label": "pisco"
   },
   {
-    "ID": 3,
-    "Name": "ron"
+    "value": 3,
+    "label": "ron"
   },
   {
-    "ID": 4,
-    "Name": "bebida"
+    "value": 4,
+    "label": "Bebida"
   },
   {
-    "ID": 5,
-    "Name": "snack"
+    "value": 5,
+    "label": "snack"
   },
   {
-    "ID": 6,
-    "Name": "cerveza"
+    "value": 6,
+    "label": "cerveza"
   },
   {
-    "ID": 7,
-    "Name": "vodka"
+    "value": 7,
+    "label": "vodka"
   }
 ]
